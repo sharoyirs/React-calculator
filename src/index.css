@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	body {
+		@apply flex items-center justify-center h-screen from-red-400 to-yellow-500 bg-gradient-to-r;
+	}
+	.calculator {
+		border: 1px solid white;
+		display: grid;
+		grid-template-columns: repeat(4, 6rem);
+		grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+	}
+	.span-two {
+		@apply col-span-2;
+	}
+	.output {
+		border: 1px solid white;
+		grid-column: 1 /-1;
+		background-color: rgb(0, 0, 0, 0.75);
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+		align-items: flex-end;
+		padding: 0.75rem;
+		word-wrap: break-word;
+		word-break: break-all;
+	}
+	button {
+		@apply cursor-pointer text-4xl border-[1px] border-white bg-[#ffffff70] hover:bg-[#ffffff8f];
+	}
+}
